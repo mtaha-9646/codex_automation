@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.get("/")
 def home():
-    return "Hello from Flask on PythonAnywhere!"
+    return render_template("index.html")
